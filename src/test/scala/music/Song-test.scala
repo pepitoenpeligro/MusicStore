@@ -13,15 +13,6 @@ class SongSpec extends FeatureSpec with GivenWhenThen {
             Then("We get correct minutes")
             assert(result == "3:14")
         }
-
-         scenario("User store a song with duration data in miliseconds"){
-            Given("a Song")
-            val song = new Song("Physical", "Future Nostalgia", Array("Dua Lipa"), 194000)
-            When("All info is added in system")
-            var result = song.toMinutes()
-            Then("We get correct minutes")
-            assert(result == "3:14")
-        }
     }
 
 }
